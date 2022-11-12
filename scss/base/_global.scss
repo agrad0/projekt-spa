@@ -1,0 +1,64 @@
+// Header styles
+
+.navbar {
+    margin-left: 20%;
+    @include flex-container;
+    .logo-container {
+        background-image: url(../../img/logo-txt.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding-top: 10px;
+        width: 8vw;
+        height: 8vw;
+        display: inline-block; 
+    }
+    .nav-menu {
+        display: inline-block;
+        list-style-type: none;
+        cursor: pointer; 
+        position: relative;
+        ul {
+            list-style-type: none;
+            @include flex-container;
+                }
+    }
+    .nav-item {
+
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        display: inline; 
+        list-style-type: none;
+    }
+}
+
+
+
+.menu-nav {
+    display: inline-block;
+}
+
+.soap-img {
+    background-image: url(../../img/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+
+.header {
+    width: 95%;
+    @include flex-container;    
+}
+
+.header-flowers {
+    flex-basis: 12.5%;
+    background-image: url(../../img/header-flowers.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-header {
+    flex-basis: 35.5%;
+}

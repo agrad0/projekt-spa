@@ -221,6 +221,8 @@ table {
 
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
@@ -233,21 +235,22 @@ input[type=checkbox], input[type=radio] {
 
 .main-header-container {
   position: relative;
-  height: 85vh;
+  height: 65vh;
 }
 .main-header-container .header-left-container {
   display: inline-block;
   width: 12%;
   min-width: 50px;
-  height: 65vh;
-  position: relative;
+  height: 27vh;
+  position: absolute;
   min-width: 50px;
+  left: -10px;
+  top: 32%;
+  z-index: 5;
 }
 .main-header-container .header-left-container img {
   width: 100%;
   position: absolute;
-  left: -10px;
-  top: 47%;
 }
 .main-header-container .menu-container {
   display: inline-block;
@@ -255,6 +258,7 @@ input[type=checkbox], input[type=radio] {
   margin-left: 6vw;
   margin-top: 1vw;
   width: 56%;
+  z-index: 15;
 }
 .main-header-container .menu-container .logo-container {
   background-image: url(../../img/logo-txt.png);
@@ -284,7 +288,7 @@ input[type=checkbox], input[type=radio] {
   font-family: "Roboto", sans-serif;
 }
 .main-header-container .menu-container .nav-menu ul li {
-  margin: 1vw;
+  padding: 1.5vw 3vw;
 }
 .main-header-container .menu-container .nav-menu ul li .nav-item {
   text-decoration: none;
@@ -295,7 +299,7 @@ input[type=checkbox], input[type=radio] {
   color: #30383b;
 }
 .main-header-container .menu-container .main-header {
-  width: 56%;
+  width: 70%;
   display: block;
   word-wrap: break-word;
   padding: 15vh 0;
@@ -332,7 +336,7 @@ input[type=checkbox], input[type=radio] {
 }
 .main-header-container .menu-container .main-header .header-ending .story-text {
   font-family: "Roboto", sans-serif;
-  margin-left: 5px;
+  margin-left: 0.8vw;
   font-weight: 200;
   color: #30383b;
 }
@@ -343,15 +347,18 @@ input[type=checkbox], input[type=radio] {
   display: inline-block;
   position: absolute;
   left: 60%;
+  z-index: 5;
 }
 .soap-img-container img {
   width: 90%;
+  z-index: 5;
 }
 
 .about {
   width: 50%;
   margin: auto;
   text-align: center;
+  z-index: 15;
 }
 .about img {
   width: 10%;
@@ -392,8 +399,7 @@ input[type=checkbox], input[type=radio] {
 .about-img-container .about-img-item .shown {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .about-img-container .about-img-item .hidden-img-container {
   position: absolute;
@@ -422,9 +428,9 @@ input[type=checkbox], input[type=radio] {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  top: 15.5%;
-  left: 15%;
-  font-size: 2.5vw;
+  top: 23%;
+  left: 33%;
+  font-size: 1.25vw;
   font-family: "Bellota", sans-serif;
   font-weight: bold;
   text-align: center;

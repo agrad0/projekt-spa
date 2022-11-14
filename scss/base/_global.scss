@@ -2,19 +2,22 @@
 
 .main-header-container {
     position: relative;
-    height: 85vh;
+    height: 65vh;
     .header-left-container {
         display: inline-block;
         width: 12%;
         min-width: 50px;
-        height: 65vh;
-        position: relative;
+        height: 27vh;
+        position: absolute;
         min-width: 50px;
+        left: -10px;
+        top: 32%;
+        z-index: 5;
         img {
             width: 100%;
             position: absolute;
-            left: -10px;
-            top: 47%;
+            // left: -10px;
+            // top: 47%;
         }
     }
     .menu-container {
@@ -23,6 +26,7 @@
         margin-left: 6vw;
         margin-top: 1vw;
         width: 56%;
+        z-index: 15;
         .logo-container {
             background-image: url(../../img/logo-txt.png);
             background-repeat: no-repeat;
@@ -48,7 +52,7 @@
                 flex-wrap: nowrap;
                 font-family: $font-primary;
                 li {
-                    margin: 1vw;
+                    padding: 1.5vw 3vw;
                     .nav-item {
                         text-decoration: none;
                         text-transform: uppercase;
@@ -61,7 +65,7 @@
                 }
         } 
         .main-header {
-        width: 56%;
+        width: 70%;
         display: block;
         word-wrap: break-word;
         padding: 15vh 0;
@@ -98,7 +102,7 @@
                     }
                 .story-text {
                     font-family: $font-primary;
-                    margin-left: 5px;
+                    margin-left: 0.8vw;
                     font-weight: 200;
                     color: $dark-grey;
                 }
@@ -112,8 +116,10 @@
         display: inline-block;
         position: absolute;
         left: 60%;
+        z-index: 5;
         img {
             width: 90%;
+            z-index: 5;
         }
     }
 
@@ -121,6 +127,7 @@
         width: 50%;
         margin: auto;
         text-align: center;
+        z-index: 15;
         img {
             width: 10%;
         }
@@ -188,9 +195,9 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 5%;
-                top: 15.5%;
-                left: 15%;
-                font-size: 2.5vw;
+                top: 23%;
+                left: 33%;
+                font-size: 1.25vw;
                 font-family: $font-secondary;
                 font-weight: bold;
                 text-align: center;

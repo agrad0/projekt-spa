@@ -15,33 +15,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="nav-menu">
+        <div class="logo-container">
+        </div>
+        <ul>
+            <li>
+                <a href="" class="nav-item">Home</a>
+            </li>
+            <li>
+                <a href="" class="nav-item">About</a>
+            </li>
+            <li>
+                <a href="" class="nav-item">Feature</a>
+            </li>
+            <li>
+                <a href="" class="nav-item">Service</a>
+            </li>
+            <li>
+                <a href="" class="nav-item">Contact</a>
+            </li>
+        </ul>
+    </nav>
     <header class="main-header" id="main-header">
         <div class="header-left-container" id="header-left-container">
             <img src="img/header-flowers.png" alt="" srcset="">
         </div>
         <div class="header-center-container">
             <div class="menu-container">
-                <div class="logo-container">
-                </div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li>
-                            <a href="" class="nav-item">Home</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-item">About</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-item">Feature</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-item">Service</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-item">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+                
             </div>
         </div>
         <div class="header-right-container">
@@ -202,8 +203,16 @@
     <div class="form">
         <form action="POST">
             <input type="text" name="name" id="name" placeholder="Name">
-
-
+            <input type="email" name="email" id="email" placeholder="Email"><br>
+            <select name="select-service" id="select-service" aria-placeholder="Select service">
+                <option value="choose">Select</option>
+                <option value="thai">Thai massage</option>
+                <option value="classic">Classic massage</option>
+                <option value="peeling">Peeling</option>
+            </select>
+            <input type="number" name="phone-number" id="phone-number">
+            <input type="date" name="date" id="date" placeholder="">
+            <input type="time" name="time" id="time">
         </form>
     </div>
 </section>

@@ -235,6 +235,41 @@ input[type=checkbox], input[type=radio] {
   box-shadow: 0 5px 20px #f0f0f0;
 }
 
+.nav-menu {
+  display: flex;
+  position: fixed;
+  top: -6%;
+  left: 10%;
+  cursor: pointer;
+  color: #30383b;
+  height: 10vh;
+}
+.nav-menu .logo-container {
+  background-image: url(../../img/logo-txt.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-basis: 20%;
+  min-width: 50px;
+  position: relative;
+}
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+}
+.nav-menu ul li {
+  margin-top: 8vw;
+  margin-right: 4vw;
+}
+.nav-menu ul li .nav-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #30383b;
+}
+
 .main-header .header-left-container {
   position: absolute;
   width: 12%;
@@ -248,39 +283,6 @@ input[type=checkbox], input[type=radio] {
 .main-header .header-center-container {
   margin: 1vw 0 0 13vw;
   width: 55%;
-}
-.main-header .header-center-container .menu-container {
-  display: flex;
-  margin: 10px 0;
-}
-.main-header .header-center-container .menu-container .logo-container {
-  background-image: url(../../img/logo-txt.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  flex-basis: 20%;
-  min-width: 50px;
-}
-.main-header .header-center-container .menu-container .nav-menu {
-  display: inline-block;
-  cursor: pointer;
-  color: #30383b;
-}
-.main-header .header-center-container .menu-container .nav-menu ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  font-family: "Roboto", sans-serif;
-}
-.main-header .header-center-container .menu-container .nav-menu ul li {
-  margin-top: 8vw;
-  margin-right: 4vw;
-}
-.main-header .header-center-container .menu-container .nav-menu ul li .nav-item {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 15px;
-  color: #30383b;
 }
 .main-header .header-right-container {
   position: absolute;
@@ -547,14 +549,26 @@ input[type=checkbox], input[type=radio] {
   flex-basis: 60%;
   padding: 5%;
   background-color: #1ba4ce;
+  padding: 5% 10% 5% 5%;
 }
-.form-section .form input {
+.form-section .form input, .form-section .form select {
   background-color: #1ba4ce;
   border-width: 0 0 1px 0;
   border-color: white;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 38%;
+  padding-bottom: 10px;
+  margin-right: 20px;
+}
+.form-section .form input select, .form-section .form select select {
+  padding-left: 1%;
 }
 .form-section .form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: white;
+  text-transform: uppercase;
+  padding-bottom: 10px;
 }
 .form-section .form input:focus,
 .form-section .form select:focus,

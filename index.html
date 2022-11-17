@@ -15,33 +15,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="main-header-container" id="main-header-container">
+    <header class="main-header" id="main-header">
         <div class="header-left-container" id="header-left-container">
             <img src="img/header-flowers.png" alt="" srcset="">
         </div>
-        <div class="menu-container">
-            <div class="logo-container">
+        <div class="header-center-container">
+            <div class="menu-container">
+                <div class="logo-container">
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li>
+                            <a href="" class="nav-item">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-item">About</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-item">Feature</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-item">Service</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-item">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li>
-                        <a href="" class="nav-item">HOME</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-item">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-item">FEATURE</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-item">SERVICE</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-item">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="main-header">
+        </div>
+        <div class="header-right-container">
+            <img src="img/header-bg.png" alt="">
+        </div>
+        <div class="main-header">
                 <article>
                     <h5>SPA & Beauty Center</h5>
                     <h2>Beauty and success starts here.</h2>
@@ -53,19 +59,16 @@
                         </a>
                         <div class="play-circle">
                             <i class="fa-regular fa-3x fa-play-circle"></i>
-                            
                         </div>
                         <div class="story-text">
                             <p>Watch our story</p>
                         </div>
                     </div>
                 </article>
-            </div>
         </div>
-        <div class="soap-img-container">
-            <img src="img/header-bg.png" alt="">
-        </div>
+
     </header>
+
     <section class="about">
         <div class="logo-container">
             <img src="img/logo.png" alt="" srcset="">
@@ -93,40 +96,122 @@
     </a>
     <a href="" class="about-img-item">
         <img src="img/services-bg-2.jpg" class="shown" alt="" srcset="">
-        <h5></h5>
+        <div class="hidden-img-container">
+            <img src="img/icons/icon-spa.png" class="hidden-img" alt="" srcset=""><br>
+            <h7 class="hidden-header">Body treatment</h7>
+        </div>
     </a>
     <a href="" class="about-img-item">
         <img src="img/services-bg-3.jpg" class="shown" alt="" srcset="">
-        <h5></h5>
+        <div class="hidden-img-container">
+            <img src="img/icons/icon-spa.png" class="hidden-img" alt="" srcset=""><br>
+            <h7 class="hidden-header">Body treatment</h7>
+        </div>
     </a>
     <a href="" class="about-img-item">
         <img src="img/services-bg-4.jpg" class="shown" alt="" srcset="">
-        <h5></h5>
+        <div class="hidden-img-container">
+            <img src="img/icons/icon-spa.png" class="hidden-img" alt="" srcset=""><br>
+            <h7 class="hidden-header">Body treatment</h7>
+        </div>
     </a>
 </section>
-<section class="team">
-    <div class="img-container"></div>
-        <div>
-            <article>
-                <h5></h5>
-                <p></p>
-                <a href="http://"></a>
-            </article>
-        </div>
-    <div class="img-container"></div>
-    <article>
-        <h5></h5>
-        <p></p>
-        <a href="http://"></a>
-    </article>
+
+<section class="procedures">
+    <div class="section-header">
+        <h5>Popular procedures</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident corrupti nesciunt non, quisquam facilis sunt error veritatis totam recusandae?</p>
+    </div>
     <div class="img-container">
-        <article>
-            <h5></h5>
-            <p></p>
-            <a href="http://"></a>
-        </article>
+        <div class="img-item">
+            <div>
+                <img src="img/procedures-bg-1.jpg" alt="" srcset="">
+                <h7>Massage therapy</h7>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est ipsa reprehenderit iste laboriosam fuga a quas neque porro distinctio in.</p>
+                <a href="" class="btn-oval">Read more</a>
+            </div>
+        </div>
+        <div class="img-item">
+            <div>
+                <img src="img/procedures-bg-2.jpg" alt="" srcset="">
+                <h7>Beauty care</h7>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est ipsa reprehenderit iste laboriosam fuga a quas neque porro distinctio in.</p>
+                <a href="" class="btn-oval">Read more</a>
+            </div>
+        </div>
+        <div class="img-item">
+            <div>
+                <img src="img/procedures-bg-3.jpg" alt="" srcset="">
+                <h7>Executive Reflexology</h7>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est ipsa reprehenderit iste laboriosam fuga a quas neque porro distinctio in.</p>
+                <a href="" class="btn-oval">Read more</a>
+            </div>
+        </div>
     </div>
 </section>
+
+<section class="team">
+    <div class="section-header">
+        <h5>Popular procedures</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident corrupti nesciunt non, quisquam facilis sunt error veritatis totam recusandae?</p>
+    </div>
+    <div class="img-container">
+        <div class="img-item2" id="team-img-1">
+            <img src="img/team-1.jpg" alt="" srcset="">
+            <div class="footer-expanding" id="footer-expanding1">
+                <h5>Jenny Austin</h5>
+                <p>Thai Massage</p>
+                <div class="sm-container" id="sm-container1">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="img-item2" id="team-img-2">
+            <img src="img/team-2.jpg" alt="" srcset="">
+            <div class="footer-expanding" id="footer-expanding1">
+                <h5>David Hannan</h5>
+                <p>Thai Massage</p>
+                <div class="sm-container" id="sm-container1">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="img-item2" id="team-img-3">
+            <img src="img/team-3.jpg" alt="" srcset="">
+            <div class="footer-expanding" id="footer-expanding1">
+                <h5>Cheryl Harris</h5>
+                <p>Thai Massage</p>
+                <div class="sm-container" id="sm-container1">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form-section">
+    <div class="form-img">
+        <img src="img/contact-bg.jpg" alt="" srcset="">
+    </div>
+    <div class="form">
+        <form action="POST">
+            <input type="text" name="name" id="name" placeholder="Name">
+
+
+        </form>
+    </div>
+</section>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

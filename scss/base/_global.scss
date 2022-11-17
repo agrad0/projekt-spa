@@ -1,174 +1,93 @@
 // Header styles
 
-.main-header-container {
-<<<<<<< Updated upstream
-    position: relative;
-=======
-    // position: relative;
->>>>>>> Stashed changes
-    height: 85vh;
+.box-shadow {
+    box-shadow: 0 5px 20px #f0f0f0;
+}
+
+.main-header {
     .header-left-container {
-        // display: inline-block;
         position: absolute;
         width: 12%;
         min-width: 50px;
-<<<<<<< Updated upstream
-        height: 65vh;
-        position: relative;
-        min-width: 50px;
-        img {
-            width: 100%;
-            position: absolute;
-            left: -10px;
-            top: 47%;
-=======
-        height: 27vh;
-        min-width: 50px;
-        left: -10px;
-        top: 32%;
+        top: 30%;
         z-index: -1;
         img {
             width: 100%;
-            z-index: 5;
-            // position: absolute;
-            // left: -10px;
-            // top: 47%;
->>>>>>> Stashed changes
         }
     }
-    .menu-container {
-        // @include flex-container;
-        // position: absolute;
-        margin-left: 1vw;
-        margin-top: 1vw;
-        width: 56%;
-<<<<<<< Updated upstream
-=======
-        z-index: 1;
->>>>>>> Stashed changes
-        .logo-container {
-            background-image: url(../../img/logo-txt.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            margin: 10px 0 0 6vw;
-            width: 20%;
-            height: 8vw;
-            display: inline-block; 
-            min-width: 50px;
-        }
-        .nav-menu {
-            display: inline-block;
-            list-style-type: none;
-            cursor: pointer; 
-            position: absolute;
-            color: $dark-grey;
-            ul {
-                list-style-type: none;
-                @include flex-container;
-                height: 7vw;
-                justify-content: space-between;
-                flex-wrap: nowrap;
-                font-family: $font-primary;
-                li {
-                    margin: 1vw;
-                    .nav-item {
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-size: 15px;
-                        list-style-type: none;
-                        line-height: 7vw;
-                        color: $dark-grey;
+    .header-center-container {
+        margin: 1vw 0 0 13vw;
+        width: 55%;
+        .menu-container {
+            display: flex;
+            margin: 10px 0;
+            .logo-container {
+                background-image: url(../../img/logo-txt.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                flex-basis: 20%;
+                min-width: 50px;
+            } 
+            .nav-menu {
+                display: inline-block;
+                cursor: pointer; 
+                color: $dark-grey;
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: $font-primary;
+                    li {
+                        margin-top: 8vw;
+                        margin-right: 4vw;
+                        .nav-item {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-size: 15px;
+                            color: $dark-grey;
+                            }
                         }
                     }
-                }
-        } 
-        .main-header {
-<<<<<<< Updated upstream
-        width: 56%;
-=======
-        // width: 70%;
->>>>>>> Stashed changes
-        display: block;
-        word-wrap: break-word;
-        padding: 15vh 0;
-        margin-left: 6vw;
-            h5, h2 {
-                font-family: $font-secondary;
-            }
-            h5 {
-                text-transform: uppercase;
-            }
-            h2 {
-                font-size: 50px;
-            }
-
-            p {
-                font-family: $font-primary;
-                font-size: 15px;
-            }
-
-            .header-ending {
-                display: flex;
-                padding: 20px 0;
-                .btn {
-                    background-color: #1ba4ce;
-                    width: 200px;
-                    height: 40px;
-                    padding: 5px 2px;
-                    color: white;
-                    text-decoration: none;
-                    text-align: center;
-                    line-height: 40px;
-                    font-size: 15px;
-                    margin-right: 15px;
-                    }
-                .story-text {
-                    font-family: $font-primary;
-                    margin-left: 5px;
-                    font-weight: 200;
-                    color: $dark-grey;
-                }
-            }
             }
         }  
-    }
-    .soap-img-container {
-        width: 56%;
-        height: 55vh;
+    }    
+    .header-right-container {
         position: absolute;
-        left: 60%;
-<<<<<<< Updated upstream
-=======
+        right: -37%;
         top: 0;
         z-index: -1;
->>>>>>> Stashed changes
+        width: 70vw;
         img {
-            width: 90%;
+            width: 70%;
         }
     }
-
-    .about {
-        width: 55%;
-        margin: auto;
-        text-align: center;
-        img {
-            width: 10%;
-        }
-        h5, h2 {
+    .main-header {
+        margin: 1vw 0 0 13vw;
+        width: 50%;
+        display: block;
+        word-wrap: break-word;
+        padding: 10vh 0;
+        z-index: 1;
+            h5, h2 {
             font-family: $font-secondary;
-        }
-        h5 {
+            }
+            h5 {
             text-transform: uppercase;
-        }
-        h2 {
-            font-size: 42px;
-        }
-
-        .btn-oval {
-            display: inline-block;
+            }
+            h2 {
+            font-size: 50px;
+            }
+            p {
+            font-family: $font-primary;
+            font-size: 15px;
+            }
+            .header-ending {
+            display: flex;
+            padding: 20px 0;
+            .btn {
             background-color: #1ba4ce;
-            width: 160px;
+            width: 200px;
             height: 40px;
             padding: 5px 2px;
             color: white;
@@ -176,10 +95,50 @@
             text-align: center;
             line-height: 40px;
             font-size: 15px;
-            margin: 30px;
-            border-radius: 20%/50%;
+            margin-right: 15px;
             }
+                .story-text {
+                font-family: $font-primary;
+                margin-left: 5px;
+                font-weight: 200;
+                color: $dark-grey;
+                }
+            }
+    }
+}
+
+.about {
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    img {
+        width: 10%;
+    }
+    h5, h2 {
+        font-family: $font-secondary;
+    }
+    h5 {
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 42px;
+    }
+
+    .btn-oval {
+        display: inline-block;
+        background-color: #1ba4ce;
+        width: 160px;
+        height: 40px;
+        padding: 5px 2px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        font-size: 15px;
+        margin: 30px;
+        border-radius: 20%/50%;
         }
+    }
 
 .about-img-container {
     display: flex;
@@ -189,9 +148,9 @@
         position: relative;
         flex-basis: 25%;
         .shown {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .hidden-img-container {
             position: absolute;
@@ -219,15 +178,9 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 5%;
-<<<<<<< Updated upstream
                 top: 15.5%;
                 left: 15%;
                 font-size: 2.5vw;
-=======
-                top: 1vw;
-                left: 33%;
-                font-size: 1.25vw;
->>>>>>> Stashed changes
                 font-family: $font-secondary;
                 font-weight: bold;
                 text-align: center;
@@ -239,12 +192,151 @@
     }
 }
 
-.team {
-    @include flex-container;
-    width: 60%;
+.procedures {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    .section-header {
+        margin-bottom: 50px;
+        h5 {
+            font-family: $font-secondary;
+            font-size: 42px;
+            margin: 1.2em;
+        }
+    }
     .img-container {
-        flex-basis: 33%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .img-item {
+        flex-basis: 25%;
+        padding: 15px;
+        // border: 1px groove;
+        // box-shadow: 0 5px 20px #f0f0f0;
+        border-color: rgb(240, 240, 240);
+        margin: 10px;
+        img {
+            width: 100%;
+        }
+        h7 {
+            font-family: $font-secondary;
+            font-size: 22px;
+            display: block;
+            margin: 12px;
+        }
+        .btn-oval {
+            display: inline-block;
+            background-color: #1ba4ce;
+            width: 50%;
+            min-width: 80px;
+            padding: 5px 2px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 15px;
+            margin: 15px;
+            border-radius: 20%/50%;
+            }
+    }
+
+}
+
+.team {
+    width: 80%;
+    margin: 10% auto;
+    text-align: center;
+    .section-header {
+        margin-bottom: 50px;
+        h5 {
+            font-family: $font-secondary;
+            font-size: 42px;
+            margin: 1.2em;
+        }
+    }
+    .img-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .img-item2 {
+        flex-basis: 27.32%;
+        // padding: 15px;
+        // border: 1px groove;
+        // box-shadow: 1px 1px 1px -1px #888888;
+        border-color: rgb(240, 240, 240);
+        margin: 10px;
+        position: relative;
+        // padding: 15px;
+        img {
+            width: 100%;
+        }
+        .footer-expanding {
+            width: 80%;
+            height: 25%;
+            position: absolute;
+            bottom: -15%;
+            left: 10%;
+            background-color: white;
+            h5 {
+                font-family: $font-secondary;
+                font-size: 22px;
+                margin: 0;
+                padding-top: 10%;
+            }
+            p {
+                margin: 5px;
+            }
+            .sm-container {
+                padding: 10px;
+                height: 0%;
+                background-color: white;
+                display: none;
+                .fa-brands {
+                    background: white;
+                    color: rgb(102, 76, 173);
+                    border-radius: 50%;
+                    border-color: gray;
+                    padding: 10px;
+                    margin: 3px;
+                    border-width: 1px;
+                    border-style: ridge;
+                    cursor: pointer;
+                }
+                .fa-brands:hover {
+                    background-color: green;
+                    color: white;
+                }
+            }
+        }
     }
 }
 
-
+.form-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    .form-img {
+        flex-basis: 40%;
+    }
+    .form {
+        flex-basis: 60%;
+        padding: 5%;
+        background-color: #1ba4ce;
+        input {
+            background-color: #1ba4ce;
+            border-width: 0 0 1px 0;
+            border-color: white;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: white;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }   
+    }
+}

@@ -231,114 +231,93 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-.main-header-container {
-<<<<<<< Updated upstream
-  position: relative;
-=======
->>>>>>> Stashed changes
-  height: 85vh;
+.box-shadow {
+  box-shadow: 0 5px 20px #f0f0f0;
 }
-.main-header-container .header-left-container {
+
+.main-header .header-left-container {
   position: absolute;
   width: 12%;
   min-width: 50px;
-<<<<<<< Updated upstream
-  height: 65vh;
-  position: relative;
-  min-width: 50px;
-}
-.main-header-container .header-left-container img {
-  width: 100%;
-  position: absolute;
-  left: -10px;
-  top: 47%;
-=======
-  height: 27vh;
-  min-width: 50px;
-  left: -10px;
-  top: 32%;
+  top: 30%;
   z-index: -1;
 }
-.main-header-container .header-left-container img {
+.main-header .header-left-container img {
   width: 100%;
-  z-index: 5;
->>>>>>> Stashed changes
 }
-.main-header-container .menu-container {
-  margin-left: 1vw;
-  margin-top: 1vw;
-  width: 56%;
-<<<<<<< Updated upstream
-=======
-  z-index: 1;
->>>>>>> Stashed changes
+.main-header .header-center-container {
+  margin: 1vw 0 0 13vw;
+  width: 55%;
 }
-.main-header-container .menu-container .logo-container {
+.main-header .header-center-container .menu-container {
+  display: flex;
+  margin: 10px 0;
+}
+.main-header .header-center-container .menu-container .logo-container {
   background-image: url(../../img/logo-txt.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  margin: 10px 0 0 6vw;
-  width: 20%;
-  height: 8vw;
-  display: inline-block;
+  flex-basis: 20%;
   min-width: 50px;
 }
-.main-header-container .menu-container .nav-menu {
+.main-header .header-center-container .menu-container .nav-menu {
   display: inline-block;
-  list-style-type: none;
   cursor: pointer;
-  position: absolute;
   color: #30383b;
 }
-.main-header-container .menu-container .nav-menu ul {
+.main-header .header-center-container .menu-container .nav-menu ul {
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  height: 7vw;
   justify-content: space-between;
-  flex-wrap: nowrap;
   font-family: "Roboto", sans-serif;
 }
-.main-header-container .menu-container .nav-menu ul li {
-  margin: 1vw;
+.main-header .header-center-container .menu-container .nav-menu ul li {
+  margin-top: 8vw;
+  margin-right: 4vw;
 }
-.main-header-container .menu-container .nav-menu ul li .nav-item {
+.main-header .header-center-container .menu-container .nav-menu ul li .nav-item {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
-  list-style-type: none;
-  line-height: 7vw;
   color: #30383b;
 }
-.main-header-container .menu-container .main-header {
-<<<<<<< Updated upstream
-  width: 56%;
-=======
->>>>>>> Stashed changes
+.main-header .header-right-container {
+  position: absolute;
+  right: -37%;
+  top: 0;
+  z-index: -1;
+  width: 70vw;
+}
+.main-header .header-right-container img {
+  width: 70%;
+}
+.main-header .main-header {
+  margin: 1vw 0 0 13vw;
+  width: 50%;
   display: block;
   word-wrap: break-word;
-  padding: 15vh 0;
-  margin-left: 6vw;
+  padding: 10vh 0;
+  z-index: 1;
 }
-.main-header-container .menu-container .main-header h5, .main-header-container .menu-container .main-header h2 {
+.main-header .main-header h5, .main-header .main-header h2 {
   font-family: "Bellota", sans-serif;
 }
-.main-header-container .menu-container .main-header h5 {
+.main-header .main-header h5 {
   text-transform: uppercase;
 }
-.main-header-container .menu-container .main-header h2 {
+.main-header .main-header h2 {
   font-size: 50px;
 }
-.main-header-container .menu-container .main-header p {
+.main-header .main-header p {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
-.main-header-container .menu-container .main-header .header-ending {
+.main-header .main-header .header-ending {
   display: flex;
   padding: 20px 0;
 }
-.main-header-container .menu-container .main-header .header-ending .btn {
+.main-header .main-header .header-ending .btn {
   background-color: #1ba4ce;
   width: 200px;
   height: 40px;
@@ -350,26 +329,11 @@ input[type=checkbox], input[type=radio] {
   font-size: 15px;
   margin-right: 15px;
 }
-.main-header-container .menu-container .main-header .header-ending .story-text {
+.main-header .main-header .header-ending .story-text {
   font-family: "Roboto", sans-serif;
   margin-left: 5px;
   font-weight: 200;
   color: #30383b;
-}
-
-.soap-img-container {
-  width: 56%;
-  height: 55vh;
-  position: absolute;
-  left: 60%;
-<<<<<<< Updated upstream
-=======
-  top: 0;
-  z-index: -1;
->>>>>>> Stashed changes
-}
-.soap-img-container img {
-  width: 90%;
 }
 
 .about {
@@ -446,15 +410,9 @@ input[type=checkbox], input[type=radio] {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-<<<<<<< Updated upstream
   top: 15.5%;
   left: 15%;
   font-size: 2.5vw;
-=======
-  top: 1vw;
-  left: 33%;
-  font-size: 1.25vw;
->>>>>>> Stashed changes
   font-family: "Bellota", sans-serif;
   font-weight: bold;
   text-align: center;
@@ -463,11 +421,144 @@ input[type=checkbox], input[type=radio] {
   opacity: 1;
 }
 
-.team {
+.procedures {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.procedures .section-header {
+  margin-bottom: 50px;
+}
+.procedures .section-header h5 {
+  font-family: "Bellota", sans-serif;
+  font-size: 42px;
+  margin: 1.2em;
+}
+.procedures .img-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 60%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.procedures .img-item {
+  flex-basis: 25%;
+  padding: 15px;
+  border-color: rgb(240, 240, 240);
+  margin: 10px;
+}
+.procedures .img-item img {
+  width: 100%;
+}
+.procedures .img-item h7 {
+  font-family: "Bellota", sans-serif;
+  font-size: 22px;
+  display: block;
+  margin: 12px;
+}
+.procedures .img-item .btn-oval {
+  display: inline-block;
+  background-color: #1ba4ce;
+  width: 50%;
+  min-width: 80px;
+  padding: 5px 2px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px;
+  margin: 15px;
+  border-radius: 20%/50%;
+}
+
+.team {
+  width: 80%;
+  margin: 10% auto;
+  text-align: center;
+}
+.team .section-header {
+  margin-bottom: 50px;
+}
+.team .section-header h5 {
+  font-family: "Bellota", sans-serif;
+  font-size: 42px;
+  margin: 1.2em;
 }
 .team .img-container {
-  flex-basis: 33%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.team .img-item2 {
+  flex-basis: 27.32%;
+  border-color: rgb(240, 240, 240);
+  margin: 10px;
+  position: relative;
+}
+.team .img-item2 img {
+  width: 100%;
+}
+.team .img-item2 .footer-expanding {
+  width: 80%;
+  height: 25%;
+  position: absolute;
+  bottom: -15%;
+  left: 10%;
+  background-color: white;
+}
+.team .img-item2 .footer-expanding h5 {
+  font-family: "Bellota", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding-top: 10%;
+}
+.team .img-item2 .footer-expanding p {
+  margin: 5px;
+}
+.team .img-item2 .footer-expanding .sm-container {
+  padding: 10px;
+  height: 0%;
+  background-color: white;
+  display: none;
+}
+.team .img-item2 .footer-expanding .sm-container .fa-brands {
+  background: white;
+  color: rgb(102, 76, 173);
+  border-radius: 50%;
+  border-color: gray;
+  padding: 10px;
+  margin: 3px;
+  border-width: 1px;
+  border-style: ridge;
+  cursor: pointer;
+}
+.team .img-item2 .footer-expanding .sm-container .fa-brands:hover {
+  background-color: green;
+  color: white;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.form-section .form-img {
+  flex-basis: 40%;
+}
+.form-section .form {
+  flex-basis: 60%;
+  padding: 5%;
+  background-color: #1ba4ce;
+}
+.form-section .form input {
+  background-color: #1ba4ce;
+  border-width: 0 0 1px 0;
+  border-color: white;
+}
+.form-section .form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: white;
+}
+.form-section .form input:focus,
+.form-section .form select:focus,
+.form-section .form textarea:focus,
+.form-section .form button:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

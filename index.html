@@ -200,12 +200,12 @@
     <div class="form-img">
         <img src="img/contact-bg.jpg" alt="" srcset="">
     </div>
-    <div class="form">
-        <form action="POST">
+    <div class="form-container">
+        <form action="POST" class="form">
             <input type="text" name="name" id="name" placeholder="Name">
-            <input type="email" name="email" id="email" placeholder="Email"><br>
+            <input type="email" name="email" id="email" placeholder="Email">
             <select name="select-service" id="select-service" aria-placeholder="Select service">
-                <option value="choose">Select</option>
+                <option value="" disabled selected>Select service</option>
                 <option value="thai">Thai massage</option>
                 <option value="classic">Classic massage</option>
                 <option value="peeling">Peeling</option>
@@ -213,6 +213,7 @@
             <input type="number" name="phone-number" id="phone-number">
             <input type="date" name="date" id="date">
             <input type="time" name="time" id="time">
+            <input type="text" name="notes" id="notes" placeholder="Your notes">
         </form>
     </div>
 </section>

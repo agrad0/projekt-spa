@@ -221,6 +221,8 @@ table {
 
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
@@ -238,11 +240,13 @@ input[type=checkbox], input[type=radio] {
 .nav-menu {
   display: flex;
   position: fixed;
-  top: -6%;
-  left: 10%;
+  left: 13%;
   cursor: pointer;
   color: #30383b;
   height: 10vh;
+  width: 59%;
+  z-index: 1;
+  background-color: white;
 }
 .nav-menu .logo-container {
   background-image: url(../../img/logo-txt.png);
@@ -260,7 +264,8 @@ input[type=checkbox], input[type=radio] {
   font-family: "Roboto", sans-serif;
 }
 .nav-menu ul li {
-  margin-top: 8vw;
+  display: list-item;
+  padding: 5px 10px;
   margin-right: 4vw;
 }
 .nav-menu ul li .nav-item {
@@ -268,6 +273,8 @@ input[type=checkbox], input[type=radio] {
   text-transform: uppercase;
   font-size: 15px;
   color: #30383b;
+  margin-left: 70%;
+  line-height: 7vh;
 }
 
 .main-header .header-left-container {
@@ -382,8 +389,7 @@ input[type=checkbox], input[type=radio] {
 .about-img-container .about-img-item .shown {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .about-img-container .about-img-item .hidden-img-container {
   position: absolute;
@@ -541,31 +547,53 @@ input[type=checkbox], input[type=radio] {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  width: 100%;
 }
 .form-section .form-img {
   flex-basis: 40%;
 }
 .form-section .form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   flex-basis: 60%;
   padding: 5%;
   background-color: #1ba4ce;
   padding: 5% 10% 5% 5%;
 }
-.form-section .form input, .form-section .form select {
+.form-section .form input {
   background-color: #1ba4ce;
   border-width: 0 0 1px 0;
   border-color: white;
   color: white;
   text-transform: uppercase;
+  padding: 4%;
   text-align: left;
-  width: 38%;
+  flex-basis: 38%;
   padding-bottom: 10px;
   margin-right: 20px;
+  line-height: 3vh;
+}
+.form-section .form #notes {
+  padding-bottom: 8%;
 }
 .form-section .form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: white;
   text-transform: uppercase;
   padding-bottom: 10px;
+}
+.form-section .form select {
+  flex-basis: 46%;
+  background-color: #1ba4ce;
+  border-width: 0 0 1px 0;
+  border-color: white;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 3.5%;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-right: 20px;
+  height: 8vh;
 }
 .form-section .form input:focus,
 .form-section .form select:focus,

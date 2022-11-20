@@ -38,3 +38,16 @@ $(".img-item2").mouseleave(function() {
 $(`.img-item2`).mouseenter(function(event) {
     event.stopPropagation();
 });
+
+$(`.hamburger-container`).click(function() {
+    $(".nav-item").css("display", "block");
+    $(this).css("display", "none");
+    $("#li-first").before(`<li class="li-shown"></li>`);
+    $(`.li-shown`).click(function() {
+        $(".nav-item").css("display", "none");
+        $(`.li-shown`).remove();
+        $(`.hamburger-container`).css("display", "block");
+    }
+    
+    )
+})

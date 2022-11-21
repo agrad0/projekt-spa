@@ -352,14 +352,14 @@
         overflow: hidden;
         height: 40vw;
         .form {
-            padding: 5% 25% 15% 10%;
+            padding: 5% 25% 0% 10%;
             overflow: hidden;
             .input-common {
                 background-color: #1ba4ce;
                 border-width: 0 0 1px 0;
                 border-color: white;
                 color: white;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 padding: 4%;
                 text-align: left;
                 margin-right: 15px;
@@ -411,7 +411,7 @@
                 line-height: 40px;
                 font-size: 12px;
                 font-weight: 400;
-                margin: 30px;
+                margin: 15px 20px;
                 border-radius: 13%/50%;
                 border-color: transparent;
                 text-transform: uppercase;
@@ -527,7 +527,7 @@
             background-color: #1ba4ce;
             overflow: hidden;
             .contact-form {
-                padding: 0% 25% 15% 10%;
+                padding: 0% 25% 0% 10%;
                 overflow: hidden;
                 .input-common {
                     background-color: #1ba4ce;
@@ -575,7 +575,7 @@
                     line-height: 40px;
                     font-size: 12px;
                     font-weight: 400;
-                    margin-top: 30px;
+                    margin: 30px;
                     border-radius: 13%/50%;
                     border-color: transparent;
                     text-transform: uppercase;

@@ -208,9 +208,9 @@
         <img src="img/contact-bg.jpg" alt="" srcset="">
     </div>
     <div class="form-container">
-        <form action="POST" class="form">
+        <form action="POST" class="form" id="myform">
             <input type="text" name="name" id="name" placeholder="Name" class="input-common">
-            <input type="email" name="email" id="email" placeholder="Email" class="input-common">
+            <input type="email" name="email" id="email-address" placeholder="Email" class="input-common">
             <select name="select-service" id="select-service" aria-placeholder="Select service">
                 <option value="" disabled selected>Select service</option>
                 <option value="thai">Thai massage</option>
@@ -221,8 +221,12 @@
             <input type="date" name="date" id="date" class="input-common">
             <input type="time" name="time" id="time" placeholder="time" class="input-common">
             <input type="text" name="notes" id="notes" placeholder="Your notes" class="input-common">
-            <input type="submit" value="Make an appointment" class="btn-submit">
+            <input type="submit" value="Make an appointment" class="btn-submit" id="create-service">
         </form>
+        <p>
+            <ul id="errors"></ul>
+            <p id="msg"></p>
+        </p>
     </div>
 </section>
 

@@ -1,8 +1,8 @@
 // Header styles
 
-.box-shadow {
-    box-shadow: 0 5px 20px #f0f0f0;
-}
+// .box-shadow {
+//     box-shadow: 0 5px 20px #f0f0f0;
+// }
 
 
 .li-shown {
@@ -101,8 +101,9 @@
             .header-ending {
             display: flex;
             padding: 20px 0;
+            
             .btn {
-            background-color: #1ba4ce;
+            background-color: $blue;
             width: 200px;
             height: 40px;
             padding: 5px 2px;

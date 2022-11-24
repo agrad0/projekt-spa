@@ -54,7 +54,7 @@ const createService = (event) => {
     console.log(name, email, service, phoneNumber, date, time, text);
 
     if (name.value.trim() === '') {
-        errors.push('Podaj imie i nazwisko')
+        errors.push('Podaj imię i nazwisko')
         name.style.borderColor = "red";
     }
 

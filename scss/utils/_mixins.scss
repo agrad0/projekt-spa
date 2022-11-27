@@ -1,41 +1,42 @@
-@mixin flex-container {
-    display: flex;
-}
-
-@mixin img-in-div {
+@mixin bg-in-div {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-@mixin btn($bg-color, $width, $height, $margin) {
+@mixin btn($color, $bg-color, $padding, $margin) {
     display: inline-block;
     font-family: "Roboto", sans-serif;
-    background-color: $bg-color;
-    width: $width;
-    height: $height;
-    padding: 5px 2px;
-    color: white;
     text-decoration: none;
     text-align: center;
     line-height: 40px;
     font-size: $small;
+    background-color: $bg-color;
+    padding: $padding;
     margin: $margin;
+    color: $color;
 }
-@mixin oval {
+
+@mixin btn-oval {
     border-radius: 20%/50%;
 }
+
 
 @mixin input-basics($width, $font-size) {
     background-color: $blue;
     border-width: 0 0 1px 0;
     border-color: white;
     color: white;
-    // padding: 4%;
     text-align: left;
     margin-right: 15px;
-    // line-height: 3.5vw;
     width: $width;
     font-size: $font-size;
-    overflow: hidden;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+@mixin flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

@@ -1,36 +1,39 @@
+// Dopisać window ready
+
+
+
 
 $(`.hamburger-container`).click(function() {
     $(".nav-item").css("display", "block");
     $(this).css("display", "none");
-    $("#li-first").before(`<li class="li-shown"></li>`);
-    $(`.li-shown`).click(function() {
-        $(".nav-item").css("display", "none");
-        $(`.li-shown`).remove();
+    console.log($(".menu-list:first-child").text)
+    $(".menu-list li:first-child").before(`<li class="li-x-sign nav-item"></li>`);
+    $(".li-x-sign").click(function() {
+        $(".nav-item:first-child").removeAttr("style");
+        $(`.li-x-sign`).remove();
         $(`.hamburger-container`).css("display", "block");
     }
-    
-    )
-})
+    )})
 
 
-$(".img-item2").mouseenter(function() {
-    $(this).children(':nth-child(2)').animate({bottom: `0%`}, 500, function(){
-        $(this).addClass(`box-shadow`);
-    })
-    $(this).find(`.sm-container`).show().css({"height":'0%'}).animate({"height":'100%'},300);
-});
+// $(".drop-up-footer").mouseenter(function() {
+//     $(this).children(':nth-child(2)').animate({bottom: `0%`}, 500, function(){
+//         $(this).addClass(`box-shadow`);
+//     })
+//     $(this).find(`.sm-container`).show().css({"height":'0%'}).animate({"height":'100%'},300);
+// });
 
-$(".img-item2").mouseleave(function() {
-    $(this).children(':nth-child(2)').animate({bottom: `-15%`}, 500)
-    $(this).find(`.sm-container`).show().css({"height":'100%'}).animate({"height":'0%'},300, function (){
-        $(this).hide();
-        $(this).parent().removeClass(`box-shadow`);
-    });
-});
+// $(".drop-up-footer").mouseleave(function() {
+//     $(this).children(':nth-child(2)').animate({bottom: `-15%`}, 500)
+//     $(this).find(`.sm-container`).show().css({"height":'100%'}).animate({"height":'0%'},300, function (){
+//         $(this).hide();
+//         $(this).parent().removeClass(`box-shadow`);
+//     });
+// });
 
-$(`.img-item2`).mouseenter(function(event) {
-    event.stopPropagation();
-});
+// $(`.img-item2`).mouseenter(function(event) {
+//     event.stopPropagation();
+// });
 
 let formCreateService = document.getElementById('myform');
 
@@ -125,6 +128,7 @@ const createService = (event) => {
 
             if (!resJSON.errors) {
                 // formCreateUser.reset();
+                pMsg.style.color = "white";
                 pMsg.innerText = `Dziękujemy ${resJSON.appointment.name}. Zostałeś zapisany!`;
             }
 

@@ -223,14 +223,33 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-.li-shown {
-  align-self: flex-end;
+body {
+  box-sizing: border-box;
 }
 
-.box-shadow {
-  box-shadow: 0 5px 20px #f0f0f0;
+.img-item {
+  padding: 15px;
 }
 
+.bordered-img-item {
+  padding: 15px;
+  border: 1px solid;
+  border-color: rgb(240, 240, 240);
+  margin: 5px;
+}
+.bordered-img-item p {
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  margin: 3vh auto;
+  padding: 2vh 0;
+  text-align: center;
+}
+
+.section-header {
+  margin: 50px 0;
+}
 .section-header h2 {
   font-family: "Bellota", sans-serif;
 }
@@ -239,6 +258,24 @@ input[type=checkbox], input[type=radio] {
 }
 .section-header p {
   font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #30383b;
+  width: 70%;
+  margin: auto;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column-3 {
+  flex-basis: 25%;
+}
+
+.column-4 {
+  flex-basis: 29%;
 }
 
 .nav-menu {
@@ -247,18 +284,28 @@ input[type=checkbox], input[type=radio] {
   padding-left: 9%;
   color: #30383b;
   height: 10vh;
-  width: 55%;
+  width: 50%;
   z-index: 1;
   background-color: white;
+  margin-top: 12px;
 }
 .nav-menu .title-logo-container {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url(../../img/logo-txt.png);
   flex-basis: 20%;
-  min-width: 50px;
-  position: relative;
+}
+.nav-menu .title-logo-container img {
+  width: 100%;
+  max-width: 100px;
+  min-width: 55px;
+}
+.nav-menu .hamburger-container {
+  flex-basis: 0%;
+}
+.nav-menu .hamburger-container .hamburger {
+  width: 55px;
+  height: 9px;
+  background-color: #1ba4ce;
+  margin: 8px 0;
+  display: none;
 }
 .nav-menu .menu-list {
   list-style-type: none;
@@ -266,19 +313,9 @@ input[type=checkbox], input[type=radio] {
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
 }
-.nav-menu .menu-list .hamburger {
-  width: 55px;
-  height: 9px;
-  background-color: #1ba4ce;
-  margin: 8px 0;
-  display: none;
-}
-.nav-menu .menu-list .hamburger label[for=drop-nav] {
-  display: none;
-}
 .nav-menu .menu-list li {
   display: list-item;
-  margin-right: 4vw;
+  margin-right: 2.5vw;
 }
 .nav-menu .menu-list li .nav-item {
   text-decoration: none;
@@ -287,7 +324,19 @@ input[type=checkbox], input[type=radio] {
   color: #30383b;
   line-height: 7vh;
 }
+.nav-menu .menu-list .li-x-sign {
+  align-self: flex-end;
+}
+.nav-menu .menu-list .li-x-sign::before {
+  content: "X";
+  font-size: 2em;
+  color: white;
+  padding-right: 5%;
+}
 
+.header {
+  position: relative;
+}
 .header .header-left-container {
   position: absolute;
   width: 12%;
@@ -307,12 +356,15 @@ input[type=checkbox], input[type=radio] {
   width: 40vw;
 }
 .header .main-header {
-  margin: 1% 0 0 9%;
+  margin-left: 9%;
   width: 50%;
   display: block;
   word-wrap: break-word;
-  padding: 10vh 0;
+  padding-top: 10vh;
   z-index: 1;
+}
+.header .main-header article {
+  margin-top: 15%;
 }
 .header .main-header h5, .header .main-header h2 {
   font-family: "Bellota", sans-serif;
@@ -330,20 +382,19 @@ input[type=checkbox], input[type=radio] {
 .header .main-header .header-ending {
   display: flex;
   padding: 20px 0;
+  align-items: center;
 }
 .header .main-header .header-ending .btn {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  background-color: #1ba4ce;
-  width: 200px;
-  height: 40px;
-  padding: 5px 2px;
-  color: white;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
+  background-color: #1ba4ce;
+  padding: 10px 40px;
   margin: 0 15px 0 0;
+  color: white;
 }
 .header .main-header .header-ending .story-text {
   font-family: "Roboto", sans-serif;
@@ -354,8 +405,6 @@ input[type=checkbox], input[type=radio] {
 
 .about {
   width: 55%;
-  margin: 5vh auto;
-  text-align: center;
 }
 .about .logo-container img {
   width: 10%;
@@ -364,32 +413,31 @@ input[type=checkbox], input[type=radio] {
   text-transform: uppercase;
   font-weight: 200;
 }
-.about .btn-oval {
+.about .btn {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  background-color: #1ba4ce;
-  width: 160px;
-  height: 40px;
-  padding: 5px 2px;
-  color: white;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
+  background-color: #1ba4ce;
+  padding: 10px 40px;
   margin: 30px;
+  color: white;
   border-radius: 20%/50%;
 }
 
 .feature {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .feature .img-item {
   cursor: pointer;
   position: relative;
-  flex-basis: 25%;
+  padding: 0;
 }
-.feature .img-item .shown {
+.feature .img-item .shown-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -401,8 +449,6 @@ input[type=checkbox], input[type=radio] {
   height: 100%;
   top: 0;
   background-color: rgba(0, 123, 255, 0.75);
-  text-align: center;
-  line-height: 200px;
   color: #fff;
   font-weight: 300;
   font-size: 3em;
@@ -412,14 +458,15 @@ input[type=checkbox], input[type=radio] {
 .feature .img-item .hidden-img-container .hidden-img {
   position: absolute;
   width: 20%;
-  top: 25%;
+  top: 33%;
   left: 42%;
 }
 .feature .img-item .hidden-img-container .hidden-header {
   position: absolute;
   margin-top: 5%;
-  top: 15.5%;
+  top: 51.5%;
   left: 15%;
+  bottom: 6vw;
   font-size: 2.5vw;
   font-family: "Bellota", sans-serif;
   font-weight: bold;
@@ -430,138 +477,125 @@ input[type=checkbox], input[type=radio] {
 }
 
 .procedures {
-  width: 80%;
-  margin: auto;
+  width: 100%;
   text-align: center;
 }
-
-.grid-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.grid-container .img-item {
-  flex-basis: 28%;
-  padding: 15px;
-  border: 1px groove;
-  border-color: rgb(240, 240, 240);
-  margin: 10px;
-}
-.grid-container img {
+.procedures img {
   width: 100%;
 }
-.grid-container h7 {
+.procedures h7 {
   font-family: "Bellota", sans-serif;
   font-size: 22px;
   display: block;
   margin: 12px;
 }
-.grid-container .btn-oval {
+.procedures .btn {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  background-color: #1ba4ce;
-  width: 50%;
-  height: 40px;
-  padding: 5px 2px;
-  color: white;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
+  background-color: #30383b;
+  padding: 10px 40px;
   margin: 15px;
-  min-width: 80px;
+  color: white;
   border-radius: 20%/50%;
+  min-width: 80px;
+}
+.procedures .btn:hover {
+  background-color: #1ba4ce;
 }
 
 .team {
   width: 80%;
-  margin: 0 auto 10% auto;
-  text-align: center;
 }
-.team .section-header {
-  margin-bottom: 50px;
-}
-.team .section-header h5 {
-  font-family: "Bellota", sans-serif;
-  font-size: 42px;
-  margin: 1.2em;
-}
-.team .img-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.team .img-item2 {
-  flex-basis: 27.32%;
-  border-color: rgb(240, 240, 240);
-  margin: 10px;
+.team .drop-up-footer {
   position: relative;
+  margin-bottom: 100px;
 }
-.team .img-item2 img {
+.team .drop-up-footer img {
   width: 100%;
 }
-.team .img-item2 .footer-expanding {
+.team .drop-up-footer .footer-expanding {
   width: 80%;
   height: 25%;
   position: absolute;
-  bottom: -15%;
+  bottom: -20%;
+  padding-bottom: 50px;
   left: 10%;
   background-color: white;
+  transition: all 0.3s;
 }
-.team .img-item2 .footer-expanding h5 {
+.team .drop-up-footer .footer-expanding h5 {
   font-family: "Bellota", sans-serif;
   font-size: 22px;
   margin: 0;
   padding-top: 10%;
 }
-.team .img-item2 .footer-expanding p {
-  margin: 5px;
+.team .drop-up-footer .footer-expanding p {
+  padding: 5px;
+  color: #30383b;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
 }
-.team .img-item2 .footer-expanding .sm-container {
-  padding: 10px;
-  height: 0%;
+.team .drop-up-footer .footer-expanding .sm-container {
+  height: 100%;
   background-color: white;
   display: none;
+  transition: all 0.3s;
 }
-.team .img-item2 .footer-expanding .sm-container .fa-brands {
+.team .drop-up-footer .footer-expanding .sm-container .fa-brands {
   background: white;
   color: rgb(102, 76, 173);
   border-radius: 50%;
   border-color: gray;
   padding: 10px;
   margin: 3px;
+  width: 15px;
+  height: 15px;
   border-width: 1px;
   border-style: ridge;
   cursor: pointer;
 }
-.team .img-item2 .footer-expanding .sm-container .fa-brands:hover {
-  background-color: #473452;
+.team .drop-up-footer .footer-expanding .sm-container .fa-brands:hover {
+  background-color: #1ba4ce;
   color: white;
+}
+.team .drop-up-footer .footer-expanding:hover > .sm-container {
+  display: block;
+}
+.team .drop-up-footer .footer-expanding:hover {
+  bottom: -10%;
+  box-shadow: 0 5px 20px #f0f0f0;
 }
 
 .form-section {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: flex-start;
   width: 100%;
+  justify-content: center;
   overflow: hidden;
 }
+.form-section .form-img {
+  flex-basis: 40%;
+}
 .form-section .form-img img {
+  height: 100%;
   width: 100%;
-  height: 45vw;
+  display: block;
 }
 .form-section .form-container {
-  display: flex;
-  flex-wrap: wrap;
   flex-basis: 60%;
   background-color: #1ba4ce;
   overflow: hidden;
-  height: 45vw;
 }
 .form-section .form-container .form {
-  padding: 5% 15% 0% 10%;
+  padding: 10% 10vw 0% 7%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .form-section .form-container .form .input-common {
   background-color: #1ba4ce;
@@ -570,17 +604,18 @@ input[type=checkbox], input[type=radio] {
   color: white;
   text-align: left;
   margin-right: 15px;
-  width: 30%;
-  font-size: 0.8em;
-  overflow: hidden;
-  padding: 4%;
-  line-height: 3.5vw;
+  width: 33%;
+  font-size: 12px;
+  padding: 4px;
+  text-transform: uppercase;
+  line-height: 33px;
+  height: 60px;
 }
 .form-section .form-container .form #notes {
-  padding: 4%;
-  width: 72%;
+  padding: 4px;
+  width: 69.5%;
 }
-.form-section .form-container .form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.form-section .form-container .form ::-webkit-input-placeholder {
   color: white;
   text-transform: uppercase;
   padding-bottom: 15px;
@@ -592,12 +627,11 @@ input[type=checkbox], input[type=radio] {
   color: white;
   text-align: left;
   margin-right: 15px;
-  width: 38%;
-  font-size: 0.8em;
-  overflow: hidden;
+  width: 34.25%;
+  font-size: 12px;
+  padding: 4px;
   text-transform: uppercase;
-  height: 20.5%;
-  padding-left: 1vw;
+  text-transform: uppercase;
 }
 .form-section .form-container .form .input-common:focus,
 .form-section .form-container .form select:focus,
@@ -605,24 +639,30 @@ input[type=checkbox], input[type=radio] {
 .form-section .form-container .form button:focus {
   outline: none;
 }
-.form-section .form-container .form .btn-submit {
+.form-section .form-container .form .submit {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  background-color: white;
-  width: 200px;
-  height: 50px;
-  padding: 5px 2px;
-  color: white;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
-  margin: 15px 20px;
-  color: black;
+  background-color: white;
+  padding: 10px 40px;
+  margin: 15px;
+  color: #30383b;
   font-weight: 400;
   border-radius: 13%/50%;
   border-color: transparent;
   text-transform: uppercase;
+}
+.form-section .form-container .form .submit:hover {
+  color: white;
+  background-color: #30383b;
+}
+.form-section .form-container #errors {
+  list-style-type: none;
+  text-align: left;
+  color: white;
 }
 
 .blog {
@@ -630,55 +670,40 @@ input[type=checkbox], input[type=radio] {
   margin: auto;
   text-align: center;
 }
-.blog .section-header {
-  margin-bottom: 50px;
+.blog .section-header h2 {
+  color: #473452;
 }
-.blog .section-header h5 {
-  font-family: "Bellota", sans-serif;
-  font-size: 42px;
-  margin: 1.2em;
-}
-.blog .grid-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.blog .img-item {
-  flex-basis: 25%;
-  padding: 15px;
-  border-color: rgb(240, 240, 240);
-  margin: 10px;
-}
-.blog .img-item img {
+.blog img {
   width: 100%;
 }
-.blog .img-item h7 {
+.blog h7 {
   font-family: "Bellota", sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 12px;
   display: block;
   margin: 12px;
 }
-.blog .img-item h5 {
+.blog h5 {
   font-family: "Bellota", sans-serif;
   font-size: 22px;
   margin: 1.2em;
+  color: #473452;
 }
-.blog .img-item .btn-oval {
+.blog .btn {
   display: inline-block;
-  background-color: black;
-  width: 50%;
-  min-width: 80px;
-  padding: 5px 2px;
-  color: white;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
+  background-color: #30383b;
+  padding: 10px 40px;
   margin: 15px;
+  color: white;
   border-radius: 20%/50%;
+  min-width: 80px;
 }
-.blog .img-item .btn-oval:hover {
+.blog .btn:hover {
   background-color: #1ba4ce;
 }
 
@@ -686,18 +711,10 @@ input[type=checkbox], input[type=radio] {
   width: 100%;
   background-color: #1ba4ce;
   color: white;
-  margin: 100px auto;
   text-align: center;
 }
-.contact .section-header {
-  margin-bottom: 50px;
-}
-.contact .section-header h5 {
-  font-family: "Bellota", sans-serif;
-  font-size: 42px;
-  padding-top: 50px;
-  width: 50%;
-  margin: 1.2em auto;
+.contact .section-header p {
+  color: white;
 }
 .contact .contact-container {
   display: flex;
@@ -723,68 +740,65 @@ input[type=checkbox], input[type=radio] {
 }
 .contact .contact-container .form-container {
   flex-basis: 40%;
-  display: flex;
-  flex-wrap: wrap;
   background-color: #1ba4ce;
-  overflow: hidden;
 }
 .contact .contact-container .form-container .contact-form {
   padding: 0% 25% 0% 10%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 .contact .contact-container .form-container .contact-form .input-common {
   background-color: #1ba4ce;
   border-width: 0 0 1px 0;
   border-color: white;
   color: white;
-  text-transform: uppercase;
-  padding: 1%;
   text-align: left;
-  margin-bottom: 15px;
-  line-height: 2.5vw;
+  margin-right: 15px;
   width: 100%;
   font-size: 0.8em;
-  overflow: hidden;
+  padding: 4px;
+  text-transform: uppercase;
+  padding: 22px;
   outline: none;
 }
 .contact .contact-container .form-container .contact-form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: white;
   text-transform: uppercase;
-  padding-bottom: 10px;
 }
 .contact .contact-container .form-container .contact-form input[name=comment], .contact .contact-container .form-container .contact-form #comment {
   background-color: #1ba4ce;
   border-width: 0 0 1px 0;
   border-color: white;
   color: white;
-  text-transform: uppercase;
-  padding: 1% 1% 10% 1%;
   text-align: left;
-  line-height: 2.5vw;
+  margin-right: 15px;
   width: 100%;
   font-size: 0.8em;
-  overflow: hidden;
+  padding: 4px;
+  text-transform: uppercase;
+  padding: 22px 22px 50px 22px;
   outline: none;
 }
-.contact .contact-container .form-container .contact-form .btn-submit {
-  display: inherit;
-  background-color: white;
+.contact .contact-container .form-container .contact-form .submit {
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  background-color: white;
-  width: 200px;
-  height: 50px;
-  padding: 5px 2px;
-  color: white;
   text-decoration: none;
   text-align: center;
   line-height: 40px;
   font-size: 15px;
+  background-color: white;
+  padding: 10px 40px;
   margin: 30px;
-  color: black;
+  color: #30383b;
   font-weight: 400;
   border-radius: 13%/50%;
   border-color: transparent;
+}
+.contact .contact-container .form-container .contact-form .submit:hover {
+  color: white;
+  background-color: #30383b;
 }
 
 .footer {
@@ -829,9 +843,9 @@ input[type=checkbox], input[type=radio] {
 .footer .copyright h7 {
   font-family: "Bellota", sans-serif;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 12px;
   display: inline;
-  margin: 16px;
+  margin: 12px;
   text-align: center;
 }
 
@@ -839,40 +853,46 @@ input[type=checkbox], input[type=radio] {
   .nav-menu {
     position: -webkit-sticky;
     position: sticky;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .nav-menu .title-logo-container img {
+    width: 70%;
+  }
+  .nav-menu .hamburger-container {
+    flex-basis: 20%;
+  }
+  .nav-menu .hamburger-container .hamburger {
+    align-self: flex-end;
+    margin-left: auto;
+    padding-right: 1%;
+    display: block;
+  }
+  .nav-menu .hamburger-container-clicked {
+    flex-basis: 40%;
+    position: relative;
   }
   .nav-menu .menu-list {
     flex-direction: column;
     position: absolute;
-    right: -60%;
+    right: -15%;
+    top: -15%;
     justify-content: right;
     padding-right: 10%;
   }
-  .nav-menu .menu-list .hamburger {
-    align-self: flex-end;
-    margin-left: auto;
-    padding-right: 1%;
-  }
-  .li-shown::before {
-    content: "X";
-    font-size: 2em;
-    color: white;
-  }
-  .nav-menu .menu-list li,
-.nav-menu .menu-list li .shown {
+  .nav-menu .menu-list li {
     margin-right: 0;
     width: 45vw;
     display: list-item;
     margin-right: 4vw;
     text-align: right;
     background-color: #1ba4ce;
-    padding-right: 5%;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     line-height: 7vh;
   }
-  .nav-menu .menu-list li .nav-item,
-.nav-menu .menu-list li .shown .nav-item {
+  .nav-menu .menu-list li .nav-item {
     color: white;
   }
   .nav-menu ul li .nav-item {
@@ -882,20 +902,15 @@ input[type=checkbox], input[type=radio] {
     background-color: #1ba4ce;
     padding-right: 5%;
   }
-  .nav-menu ul .li-shown {
+  .nav-menu ul .li-x-sign {
     content: "X";
-    padding-right: 10%;
-    margin-right: 3.3%;
-    width: 42.5vw;
-  }
-  .nav-menu .menu-list .hamburger {
-    display: block;
   }
   .header .header-right-container {
     display: none;
   }
   .header .main-header {
     width: 80%;
+    padding: 5vh 0;
   }
   .feature .img-item {
     flex-basis: 50%;

@@ -315,14 +315,14 @@ section {
 }
 .nav-menu .menu-list li {
   display: list-item;
-  margin-right: 2.5vw;
+  padding: 1.5vw;
 }
 .nav-menu .menu-list li .nav-item {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
   color: #30383b;
-  line-height: 7vh;
+  line-height: 3vh;
 }
 .nav-menu .menu-list .li-x-sign {
   align-self: flex-end;
@@ -395,6 +395,7 @@ section {
   padding: 10px 40px;
   margin: 0 15px 0 0;
   color: white;
+  white-space: nowrap;
 }
 .header .main-header .header-ending .story-text {
   font-family: "Roboto", sans-serif;
@@ -424,6 +425,7 @@ section {
   padding: 10px 40px;
   margin: 30px;
   color: white;
+  white-space: nowrap;
   border-radius: 20%/50%;
 }
 
@@ -500,6 +502,7 @@ section {
   padding: 10px 40px;
   margin: 15px;
   color: white;
+  white-space: nowrap;
   border-radius: 20%/50%;
   min-width: 80px;
 }
@@ -575,6 +578,7 @@ section {
   width: 100%;
   justify-content: center;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 .form-section .form-img {
   flex-basis: 40%;
@@ -650,6 +654,7 @@ section {
   padding: 10px 40px;
   margin: 15px;
   color: #30383b;
+  white-space: nowrap;
   font-weight: 400;
   border-radius: 13%/50%;
   border-color: transparent;
@@ -700,6 +705,7 @@ section {
   padding: 10px 40px;
   margin: 15px;
   color: white;
+  white-space: nowrap;
   border-radius: 20%/50%;
   min-width: 80px;
 }
@@ -718,7 +724,7 @@ section {
 }
 .contact .contact-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .contact .contact-container .icon-container {
@@ -792,6 +798,7 @@ section {
   padding: 10px 40px;
   margin: 30px;
   color: #30383b;
+  white-space: nowrap;
   font-weight: 400;
   border-radius: 13%/50%;
   border-color: transparent;
@@ -854,7 +861,7 @@ section {
     position: -webkit-sticky;
     position: sticky;
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
   }
   .nav-menu .title-logo-container img {
     width: 70%;
@@ -873,16 +880,17 @@ section {
     position: relative;
   }
   .nav-menu .menu-list {
+    display: none;
     flex-direction: column;
     position: absolute;
     right: -15%;
-    top: -15%;
+    top: -20%;
     justify-content: right;
     padding-right: 10%;
   }
   .nav-menu .menu-list li {
-    margin-right: 0;
-    width: 45vw;
+    padding: 1vw;
+    width: 60vw;
     display: list-item;
     margin-right: 4vw;
     text-align: right;
@@ -894,16 +902,14 @@ section {
   }
   .nav-menu .menu-list li .nav-item {
     color: white;
-  }
-  .nav-menu ul li .nav-item {
-    display: none;
     text-align: right;
     color: white;
     background-color: #1ba4ce;
     padding-right: 5%;
   }
-  .nav-menu ul .li-x-sign {
+  .nav-menu .menu-list .li-x-sign {
     content: "X";
+    cursor: pointer;
   }
   .header .header-right-container {
     display: none;
@@ -917,7 +923,6 @@ section {
   }
   .feature .img-item .hidden-img-container .hidden-header {
     left: 32%;
-    top: 21.5%;
   }
   .blog,
 .team,
@@ -929,7 +934,54 @@ section {
   }
   .form-section .form-container {
     flex-basis: 100%;
-    height: auto;
-    padding: 5% 5% 0% 0%;
+  }
+  .form-section .form-container .form {
+    padding: 5%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  section {
+    padding: 1px;
+  }
+  .column-3,
+.column-4 {
+    flex-basis: 100%;
+  }
+  .header .main-header {
+    padding: 0;
+  }
+  .about {
+    width: 95%;
+  }
+  .feature .img-item {
+    flex-basis: 100%;
+    height: 25vh;
+    display: flex;
+    padding: 5px 0;
+  }
+  .feature .img-item .shown-img {
+    height: none;
+  }
+  .feature .img-item .hidden-img-container .hidden-header {
+    font-size: 4.5vw;
+  }
+  .form-section .form-container .form .input-common,
+.form-section .form-container .form select,
+.form-section .form-container .form #notes {
+    width: 100%;
+    padding: 12px;
+    font-size: 32px;
+  }
+  .form-section .form-container #errors {
+    text-align: center;
+  }
+  .contact .contact-container .icon-container,
+.contact .contact-container .form-container {
+    flex-basis: 100%;
+  }
+  .contact .contact-container .icon-container .contact-form,
+.contact .contact-container .form-container .contact-form {
+    padding: 0;
   }
 }/*# sourceMappingURL=style.css.map */

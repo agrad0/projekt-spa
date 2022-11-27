@@ -96,13 +96,13 @@ section {
         font-family: $font-primary;
         li {
             display: list-item;
-            margin-right: 2.5vw;
+            padding: 1.5vw;
             .nav-item {
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: $small;
                 color: $dark-grey;
-                line-height: 7vh;
+                line-height: 3vh;
                 }
             }
         .li-x-sign {
@@ -333,6 +333,7 @@ section {
     width: 100%;
     justify-content: center;
     overflow: hidden;
+    font-family: $font-primary;
     .form-img {
         flex-basis: 40%;
         img {
@@ -387,7 +388,7 @@ section {
             .submit:hover {
                 color: white;
                 background-color: $dark-grey
-            }  
+            }   
         }
         #errors {
             list-style-type: none;
@@ -444,7 +445,7 @@ section {
     }
     .contact-container {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         .icon-container {
             flex-basis: 30%;
@@ -505,11 +506,8 @@ section {
 .footer {
     display: block;
     .nav-menu2 {
-        // display: flex;
-        // padding-left: 9%;
         cursor: pointer; 
         color: $dark-grey;
-        // width: 55%;
         z-index: 1;
         background-color: white;
     .logo-container {
@@ -556,7 +554,7 @@ section {
     .nav-menu {
         position: sticky;
         justify-content: space-between;
-        width: 80%;
+        width: 85%;
         .title-logo-container {
             img {
                 width: 70%;
@@ -571,71 +569,62 @@ section {
                 display: block;
             }
         }
-
         .hamburger-container-clicked {
             flex-basis: 40%;
-            position: relative
+            position: relative;
         }
-
-
         .menu-list {
-        flex-direction: column;
-        position: absolute;
-        right: -15%;
-        top: -15%;
-        justify-content: right;
-        padding-right: 10%;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            right: -15%;
+            top: -20%;
+            justify-content: right;
+            padding-right: 10%;
+            li {
+                padding: 1vw;
+                width: 60vw;
+                display: list-item;
+                margin-right: 4vw;
+                text-align: right;
+                background-color: $blue;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: $small;
+                line-height: 7vh;
+                .nav-item {
+                    color: white;
+                    text-align: right;
+                    color: white;
+                    background-color: #1ba4ce;
+                    padding-right: 5%;
+                }
+            }
+            .li-x-sign {
+                content: "X";
+                cursor: pointer;
+            }   
         }
     }
-
-
-    .nav-menu .menu-list li {
-        margin-right: 0;
-        width: 45vw;
-        display: list-item;
-        margin-right: 4vw;
-        text-align: right;
-        background-color: $blue;
-        // padding-right: 5%;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 15px;
-        line-height: 7vh;
-        .nav-item {
-            color: white;
+    .header {
+        .header-right-container {
+            display: none;
         }
-    } 
+        .main-header {
+            width: 80%;
+            padding: 5vh 0;
+        }
+    }
     
-    .nav-menu ul li .nav-item {
-        display: none;
-        text-align: right;
-        color: white;
-        background-color: #1ba4ce;
-        padding-right: 5%;
-    }
-
-    .nav-menu ul .li-x-sign {
-        content: "X";
-        // padding-right: 10%;
-        // margin-right: 3.3%;
-        // padding-right: 5%;
-    }
-
-    .header .header-right-container {
-        display: none;
-    }
-
-    .header .main-header {
-        width: 80%;
-        padding: 5vh 0;
-    }
-
-    .feature .img-item {
+    .feature {
+        .img-item {
         flex-basis: 50%;
-        .hidden-img-container .hidden-header {
-        left: 32%;
-        top: 21.5%;
-        }    
+            .hidden-img-container {
+                .hidden-header {
+                left: 32%;
+                }   
+            }
+        }   
     }
 
     .blog,
@@ -643,15 +632,84 @@ section {
     .procedures {
         width: 95%;
     }
-
+    
     .form-section { 
         .form-img {
         display: none;
         }
         .form-container {
         flex-basis: 100%;
-        height: auto;
-        padding: 5% 5% 0% 0%;
+            .form {
+                padding: 5%;
+                justify-content: center;
+            }
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    section {
+        padding: 1px;
+    }
+    
+    .column-3,
+    .column-4 {
+    flex-basis: 100%;
+    }
+    .header {
+        .main-header {
+            padding: 0;
+        }
+    }
+
+    .about {
+    width: 95%;    
+    }
+
+    .feature {
+        .img-item {
+        flex-basis: 100%;
+        height: 25vh;
+        display: flex;
+        padding: 5px 0;
+        .shown-img {
+            height: none;
+        }
+            .hidden-img-container {
+                .hidden-header {
+                font-size: 4.5vw;
+                }
+            }
+        }
+    }
+    .form-section {
+        .form-container {
+            .form {
+                .input-common,
+                select,
+                #notes
+                 {
+                    width: 100%;
+                    padding: $smallest;
+                    font-size: 32px;
+                }
+            }
+            #errors {
+                text-align: center;
+            }
+        }  
+    }
+    .contact {
+        .contact-container {
+            .icon-container,
+            .form-container {
+                flex-basis: 100%;
+                .contact-form {
+                    padding: 0;
+                }
+                    
+            }
+        }
+    }
+}
+

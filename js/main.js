@@ -4,36 +4,21 @@
 
 
 $(`.hamburger-container`).click(function() {
-    $(".nav-item").css("display", "block");
+    $(".menu-list").css("display", "flex");
     $(this).css("display", "none");
     console.log($(".menu-list:first-child").text)
     $(".menu-list li:first-child").before(`<li class="li-x-sign nav-item"></li>`);
     $(".li-x-sign").click(function() {
-        $(".nav-item:first-child").removeAttr("style");
+        $(".menu-list").removeAttr("style");
         $(`.li-x-sign`).remove();
         $(`.hamburger-container`).css("display", "block");
-    }
-    )})
-
-
-// $(".drop-up-footer").mouseenter(function() {
-//     $(this).children(':nth-child(2)').animate({bottom: `0%`}, 500, function(){
-//         $(this).addClass(`box-shadow`);
-//     })
-//     $(this).find(`.sm-container`).show().css({"height":'0%'}).animate({"height":'100%'},300);
-// });
-
-// $(".drop-up-footer").mouseleave(function() {
-//     $(this).children(':nth-child(2)').animate({bottom: `-15%`}, 500)
-//     $(this).find(`.sm-container`).show().css({"height":'100%'}).animate({"height":'0%'},300, function (){
-//         $(this).hide();
-//         $(this).parent().removeClass(`box-shadow`);
-//     });
-// });
-
-// $(`.img-item2`).mouseenter(function(event) {
-//     event.stopPropagation();
-// });
+    })
+    $(".nav-item").click(function(){
+        $(".menu-list").removeAttr("style");
+        $(`.li-x-sign`).remove();
+        $(`.hamburger-container`).css("display", "block")
+    })
+})
 
 let formCreateService = document.getElementById('myform');
 

@@ -15,6 +15,7 @@
     padding: $padding;
     margin: $margin;
     color: $color;
+    white-space: nowrap;
 }
 
 @mixin btn-oval {
